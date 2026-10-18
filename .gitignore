@@ -37,3 +37,11 @@ dist-ssr
 .worktrees/
 .security-key
 logs/security/
+
+# Review screenshots. Agent browser tooling writes into .playwright-mcp/ and
+# full-page captures land at the root; neither is part of the project. They
+# accumulate in the dozens and this repository is public, so an untracked
+# pile here is one careless `git add -A` away from publishing whatever else
+# happens to be sitting in the tree.
+.playwright-mcp/
+celery-*-full.png
